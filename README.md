@@ -26,8 +26,6 @@ The project achieves the following objectives with help of Terraform & Ansible:
    - The load balancer distributes traffic across instances in the target group, with dependencies ensuring the web server Auto Scaling Group is in place before the load balancer is created.
 
 ## File Structure
-   - Terraform code sets up a custom VPC with public and private subnets, an internet gateway, a NAT gateway, and associated route tables.
-   - It also configures security groups to manage traffic for load balancers, Ansible control nodes, and web servers, ensuring proper network segmentation and secure access.
    - root/:
      - main.tf: The main Terraform configuration file that sets up the core infrastructure.
      - outputs.tf: Contains output values that can be used to retrieve information about the deployed infrastructure.
