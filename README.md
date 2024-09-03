@@ -25,5 +25,36 @@ The project achieves the following objectives with help of Terraform & Ansible:
    - Terraform code sets up an internet-facing load balancer with a target group and listener.
    - The load balancer distributes traffic across instances in the target group, with dependencies ensuring the web server Auto Scaling Group is in place before the load balancer is created.
 
+## File Structure
+   - Terraform code sets up a custom VPC with public and private subnets, an internet gateway, a NAT gateway, and associated route tables.
+   - It also configures security groups to manage traffic for load balancers, Ansible control nodes, and web servers, ensuring proper network segmentation and secure access.
+   - root/:
+     - main.tf: The main Terraform configuration file that sets up the core infrastructure.
+     - outputs.tf: Contains output values that can be used to retrieve information about the deployed infrastructure.
+     - variables.tf: Defines input variables for customizing the infrastructure setup.
+     - ansible_cn_config.sh: A user data script for configuring the Ansible control node.
+
+   - modules/: This directory contains reusable Terraform modules for different components of your infrastructure:
+     - compute/:
+       - main.tf: Configuration for computing resources like EC2 instances.
+       - variables.tf: Input variables specific to compute resources.
+       - outputs.tf: Outputs related to compute resources.
+   - networking/:
+       - main.tf: Configuration for networking components such as VPC, subnets, and security groups.
+       - variables.tf: Input variables for networking configurations.
+       - outputs.tf: Outputs related to networking.
+   - loadbalancing/:
+       - main.tf: Configuration for load balancers (likely an ALB or NLB).
+       - variables.tf: Input variables for the load balancer setup.
+       - outputs.tf: Outputs related to load balancing.
+   - eventbridge/:
+       - main.tf: Configuration for AWS EventBridge to manage event-driven workflows.
+       - variables.tf: Input variables for EventBridge configurations.
+   - systemsmanager/:
+       - main.tf: Configuration for AWS Systems Manager, which may include automation and patch management.
+       - outputs.tf: Outputs related to Systems Manager.
+   - roles/:
+       - main.tf: Configuration for IAM roles and policies.
+       - outputs.tf: Outputs related to IAM roles and access management.
 
 
