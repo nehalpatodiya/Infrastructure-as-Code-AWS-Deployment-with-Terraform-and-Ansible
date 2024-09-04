@@ -63,7 +63,8 @@ To use this project, follow these steps:
    - Get code by cloning this repository.
    - Configure AWS CLI with access and secret keys having appropriate permissions.
 
-2. **Go inside Root Directory of Project**:
+2. **Apply Terraform**:
+   - Go inside root dir of project
    - Initialize Terraform
    ```bash
    terraform init
