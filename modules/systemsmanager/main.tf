@@ -16,6 +16,5 @@ mainSteps:
   inputs:
     runCommand:
     - 'sudo ansible-playbook /home/ec2-user/data/config_webserver.yml'
-    - 'sudo touch /home/ec2-user/data/hi'
 DOC
 }
