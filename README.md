@@ -63,7 +63,11 @@ To use this project, follow these steps:
    - Get code by cloning this repository.
    - Configure AWS CLI with access and secret keys having appropriate permissions.
 
-2. **Apply Terraform**:
+2. **Change Variables**:
+   - In root dir change "access_ip" to your IP and ec2_instance_connect_ip to IP range wrt. aws region set in main.tf file
+   - In main.tf change local and modules variables accordingly.
+
+3. **Apply Terraform**:
    - Go inside root dir of project
    - Initialize Terraform
    ```bash
