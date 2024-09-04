@@ -54,5 +54,25 @@ The project achieves the following objectives with help of Terraform & Ansible:
      - roles/:
        - main.tf: Configuration for IAM roles and policies.
        - outputs.tf: Outputs related to IAM roles and access management.
+## Getting Started
 
+To use this project, follow these steps:
 
+1. **Prerequisites**:
+   - Install Terraform on your control node.
+   - Get code by cloning this repository.
+   - Configure AWS CLI with access and secret keys having appropriate permissions.
+
+2. **Go inside Root Directory of Project**:
+   - Initialize Terraform
+   ```bash
+   terraform init
+   ```
+   - Generate plan of Terraform
+   ```bash
+   terraform plan
+   ```
+   - Apply Terraform to create or modify resources
+   ```bash
+   terraform apply
+   ```
